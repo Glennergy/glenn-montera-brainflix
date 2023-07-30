@@ -1,11 +1,12 @@
 import "./App.scss";
-import Header from "./components/Component/Header.js";
+import Nav from "./components/Component/Nav.js";
+import axios from "axios";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <>
+      <Nav />
+    </>
   );
 }
 
