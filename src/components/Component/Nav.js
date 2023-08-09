@@ -15,7 +15,7 @@ function Nav() {
           type="text"
           id="search"
           name="search"
-          value="Search"
+          placeholder="Search"
         ></input>
       </form>
       <img className="header__profile" src={Profile}></img>
