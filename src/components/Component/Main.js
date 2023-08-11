@@ -7,33 +7,42 @@ import data from "../../data/videos.json";
 import details from "../../data/video-details.json";
 
 function Main() {
-  let [currentVideo, setState] = useState(data[0].id);
-  console.log(currentVideo);
+  // Creating variables with State Values
+  const [currentVideo, setVideo] = useState(details[0]);
+  const [currentID, setID] = useState(details[0].id);
 
-  const updateVideo = () => {
-    if (currentVideo == "25ce5d91-a262-4dcf-bb87-42b87546bcfa") {
-      console.log("already set");
-    } else {
-      for (let i = 0; i < details.length; i++) {
-        console.log(data[i].id);
-        if (data[i].id == "25ce5d91-a262-4dcf-bb87-42b87546bcfa") {
-          setState((currentVideo = details[i].id));
-        }
+  // State Change for Current selected ID
+  const updateID = (id) => {
+    for (let i = 0; i < data.length; i++) {
+      console.log(data[i].id);
+      if (data[i].id == id) {
+        setID(data[i].id);
+        console.log("new id is" + { currentID });
+        updateVideo(currentID);
+      }
+    }
+  };
+
+  // State Change for Current selected video
+  const updateVideo = (newid) => {
+    for (let i = 0; i < data.length; i++) {
+      console.log(details[i].id);
+      if (details[i].id == newid) {
+        setVideo(details[i]);
       }
     }
   };
 
   return (
     <main className="main">
-      {/* <Video /> */}
+      <Video video={currentVideo} />
       <div className="main__container">
         <div className="main__divider">
           {/* <Description /> */}
           {/* <Comments /> */}
-          <div>{currentVideo}</div>
-          <button onClick={updateVideo}>Test</button>
+          <div>{currentVideo.title}</div>
         </div>
-        {/* <NextVideos current=CurrentVideo.id/> */}
+        {/* <NextVideos current=currentVideo/> */}
       </div>
     </main>
   );
