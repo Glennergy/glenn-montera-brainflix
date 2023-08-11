@@ -1,0 +1,66 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+// Nav
+.header {
+  padding: 0 16px;
+  width: max-context;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+  }
+  &__link {
+    margin: 16px 0;
+    align-self: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    &--image {
+      height: 25px;
+      width: 120px;
+    }
+  }
+  &__form {
+    display: inline;
+    width: 88%;
+    margin-bottom: 16px;
+    @include tablet {
+      height: 40px;
+    }
+    @include desktop {
+      height: 40px;
+    }
+  }
+  &__search {
+    height: 36px;
+    width: 90%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: $mercury;
+    text-indent: 17%;
+    background-size: 30px;
+    background: url("../../assets/icons/search.svg") no-repeat;
+    background-color: $alabaster;
+    background-position: 10% 50%;
+
+    &::placeholder {
+      color: $brainflix-darkblack;
+      font-size: 14px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    margin-left: 16px;
+    right: 16px;
+    top: 56px;
+    @include tablet {
+      position: initial;
+    }
+  }
+}

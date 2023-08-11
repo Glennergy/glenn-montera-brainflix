@@ -9,7 +9,7 @@ function NextVideos(props) {
 
   return (
     <>
-      <h3 className="next-video"> NEXT VIDEOS</h3>;
+      <h3 className="next-video"> NEXT VIDEOS</h3>
       {props.data.map((data) => (
         <Thumbnail
           current={currentID}

@@ -1,17 +1,20 @@
 @use "./styles/partials/fonts" as *;
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/colors" as *;
-@use "./styles/Component.scss" as *;
 
 * {
   font-family: "AvenirNextLTPro";
-  width: auto;
   margin: 0;
 }
 
-.video {
+li {
+  list-style: none;
+}
+
+.main__video {
+  width: fit-content;
   &__player {
-    width: 400px;
+    width: 90%;
     height: 300px;
   }
 }
@@ -20,7 +23,7 @@
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background-color: grey;
+  background-color: $mercury;
 
   &--user {
     width: 50px;

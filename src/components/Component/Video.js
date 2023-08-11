@@ -1,11 +1,8 @@
-import { useState } from "react";
-import details from "../../data/video-details.json";
-
 function Video(props) {
   return (
-    <div className="video">
+    <div className="main__video">
       <video
-        className="video__player"
+        className="main__video__player"
         controls
         poster={props.video.image}
       ></video>

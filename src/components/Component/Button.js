@@ -1,21 +1,22 @@
+import "./Button.scss";
 import Upload from "../../assets/icons/upload.svg";
 import AddComment from "../../assets/icons/add_comment.svg";
 
 function Button(props) {
-  if (props.type == "upload") {
+  if (props.type === "upload") {
     return (
-      <button className="button--upload">
-        <img className="button__icon--upload" src={Upload}></img>
-        UPLOAD
+      <button className="button">
+        <img className="button__icon" src={Upload} alt="upload"></img>
+        <p className="button__text">UPLOAD</p>
       </button>
     );
   }
 
-  if (props.type == "comment") {
+  if (props.type === "comment") {
     return (
-      <button type="submit" className="button--comment">
-        <img className="button__icon--comment" src={AddComment}></img>
-        COMMENT
+      <button type="submit" className="button">
+        <img className="button__icon" src={AddComment} alt="comment"></img>
+        <p className="button__text">COMMENT</p>
       </button>
     );
   }
