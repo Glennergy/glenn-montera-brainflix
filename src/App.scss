@@ -4,3 +4,18 @@
     height: 300px;
   }
 }
+
+.profilepicture {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: grey;
+
+  &--user {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-image: url("./assets/images/Mohan-muruge.jpg");
+    background-size: cover;
+  }
+}

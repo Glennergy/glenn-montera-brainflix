@@ -1,7 +1,6 @@
 import Logo from "../../assets/logo/BrainFlix-logo.svg";
-import Profile from "../../assets/images/Mohan-muruge.jpg";
-import Upload from "../../assets/icons/upload.svg";
 import Button from "./Button";
+import Profile from "./Profile";
 
 function Nav() {
   return (
@@ -18,14 +17,9 @@ function Nav() {
           placeholder="Search"
         ></input>
       </form>
-      <img className="header__profile" src={Profile}></img>
+      <Profile currentuser={true} />
 
-      <Button
-        className="header__upload"
-        iconClassName="header__upload--icon"
-        src={Upload}
-        text="UPLOAD"
-      />
+      <Button type="upload" />
     </header>
   );
 }

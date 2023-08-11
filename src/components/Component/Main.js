@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Video from "./Video";
 import Description from "./Description";
-import Comments from "./Comments";
+import CommentSection from "./CommentSection";
 import NextVideos from "./NextVideos";
 import data from "../../data/videos.json";
 import details from "../../data/video-details.json";
@@ -10,6 +10,7 @@ function Main() {
   // Creating variables with State Values
   const [currentVideo, setVideo] = useState(details[0]);
   const [currentID, setID] = useState(details[0].id);
+  const [currentComments, setComments] = useState(currentVideo.comments);
 
   // State Change for Current selected ID
   const updateID = (id) => {
@@ -38,8 +39,8 @@ function Main() {
       <Video video={currentVideo} />
       <div className="main__container">
         <div className="main__divider">
-          {<Description video={currentVideo} />}
-          {/* <Comments /> */}
+          <Description video={currentVideo} />
+          <CommentSection comments={currentComments} />
         </div>
         {/* <NextVideos current=currentVideo/> */}
       </div>
