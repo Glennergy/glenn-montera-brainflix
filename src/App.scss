@@ -1,3 +1,14 @@
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/colors" as *;
+@use "./styles/Component.scss" as *;
+
+* {
+  font-family: "AvenirNextLTPro";
+  width: auto;
+  margin: 0;
+}
+
 .video {
   &__player {
     width: 400px;
