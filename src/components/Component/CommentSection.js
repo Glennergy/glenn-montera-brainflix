@@ -18,7 +18,7 @@ function CommentSection(props) {
       <div className="comments__top">
         <Profile currentuser={true} />
         <form className="comments__form" onSubmit={clickHandler}>
-          <label for="comment"> JOIN THE CONVERSATION</label>
+          <h3 className="comments__form--header">JOIN THE CONVERSATION</h3>
           <input
             type="text"
             id="comment"
@@ -28,9 +28,8 @@ function CommentSection(props) {
           <Button type="comment" />
         </form>
       </div>
-      {props.comments.map((comment, index) => (
+      {props.comments.map((comment) => (
         <Comments
-          key={index}
           name={comment.name}
           date={comment.timestamp}
           comment={comment.comment}

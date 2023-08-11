@@ -19,3 +19,10 @@
     background-size: cover;
   }
 }
+
+.next-video {
+  &__thumbnails {
+    width: 100px;
+    height: 100px;
+  }
+}

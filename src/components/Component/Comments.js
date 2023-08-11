@@ -5,7 +5,7 @@ function Comments(props) {
   return (
     <div className="comments__entry">
       <Profile />
-      <div className="commenst__entry__information">
+      <div className="comments__entry__information">
         <div className="comments__entry__info">
           <p className="comments__entry__name">{props.name}</p>
           <p className="comments__entry__date">{time}</p>

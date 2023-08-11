@@ -12,26 +12,35 @@ function Main() {
   const [currentID, setID] = useState(details[0].id);
   const [currentComments, setComments] = useState(currentVideo.comments);
 
-  // State Change for Current selected ID
-  const updateID = (id) => {
+  // call all State Change Functions
+  const updatePage = (id) => {
+    updateID(id);
+    updateVideo(id);
     for (let i = 0; i < data.length; i++) {
-      console.log(data[i].id);
-      if (data[i].id == id) {
-        setID(data[i].id);
-        console.log("new id is" + { currentID });
-        updateVideo(currentID);
+      if (details[i].id == id) {
+        updateComments(details[i].comments);
       }
     }
+  };
+
+  // State Change for currentID
+
+  const updateID = (newid) => {
+    setID((currentID) => newid);
   };
 
   // State Change for Current selected video
   const updateVideo = (newid) => {
     for (let i = 0; i < data.length; i++) {
-      console.log(details[i].id);
       if (details[i].id == newid) {
-        setVideo(details[i]);
+        setVideo((currentVideo) => details[i]);
       }
     }
+  };
+
+  // State Change for currentComments
+  const updateComments = (comments) => {
+    setComments((currentComments) => comments);
   };
 
   return (
@@ -40,9 +49,12 @@ function Main() {
       <div className="main__container">
         <div className="main__divider">
           <Description video={currentVideo} />
-          <CommentSection comments={currentComments} />
+          <CommentSection
+            comments={currentComments}
+            setComments={setComments}
+          />
         </div>
-        {/* <NextVideos current=currentVideo/> */}
+        {<NextVideos current={currentID} data={data} updatePage={updatePage} />}
       </div>
     </main>
   );
