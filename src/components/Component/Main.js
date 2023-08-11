@@ -38,9 +38,8 @@ function Main() {
       <Video video={currentVideo} />
       <div className="main__container">
         <div className="main__divider">
-          {/* <Description /> */}
+          {<Description video={currentVideo} />}
           {/* <Comments /> */}
-          <div>{currentVideo.title}</div>
         </div>
         {/* <NextVideos current=currentVideo/> */}
       </div>
