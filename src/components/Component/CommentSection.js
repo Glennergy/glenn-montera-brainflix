@@ -16,7 +16,7 @@ function CommentSection(props) {
     <section className="comments">
       <h3>{count} Comments</h3>
       <div className="comments__top">
-        <Profile currentuser={true} />
+        <Profile currentUser={true} />
         <form className="comments__form" onSubmit={clickHandler}>
           <h3 className="comments__form--header">JOIN THE CONVERSATION</h3>
           <input

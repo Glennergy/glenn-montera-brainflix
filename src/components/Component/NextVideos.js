@@ -8,8 +8,8 @@ function NextVideos(props) {
   };
 
   return (
-    <>
-      <h3 className="next-video"> NEXT VIDEOS</h3>
+    <section className="next-video">
+      <h3 className="next-video__header"> NEXT VIDEOS</h3>
       {props.data.map((data) => (
         <Thumbnail
           current={currentID}
@@ -20,7 +20,7 @@ function NextVideos(props) {
           videoHandler={videoHandler}
         />
       ))}
-    </>
+    </section>
   );
 }
 

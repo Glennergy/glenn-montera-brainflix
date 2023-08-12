@@ -5,13 +5,13 @@ import Profile from "./Profile";
 
 function Nav() {
   return (
-    <header className="header">
-      <a href="#" className="header__link">
-        <img className="header__link--image" src={Logo}></img>
+    <header className="nav">
+      <a href="#" className="nav__link">
+        <img className="nav__link--image" src={Logo}></img>
       </a>
-      <form className="header__form">
+      <form className="nav__form">
         <input
-          className="header__search"
+          className="nav__search"
           type="text"
           id="search"
           name="search"
@@ -19,7 +19,7 @@ function Nav() {
         ></input>
       </form>
       <Button type="upload" />
-      <Profile currentUser={true} headerIcon />
+      <Profile currentUser={true} nav={true} />
     </header>
   );
 }

@@ -11,14 +11,6 @@ li {
   list-style: none;
 }
 
-.main__video {
-  width: fit-content;
-  &__player {
-    width: 90%;
-    height: 300px;
-  }
-}
-
 .profilepicture {
   width: 50px;
   height: 50px;
@@ -35,6 +27,13 @@ li {
 }
 
 .next-video {
+  margin-top: 16px;
+  &__item {
+    margin: 16px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   &__thumbnails {
     width: 100px;
     height: 100px;

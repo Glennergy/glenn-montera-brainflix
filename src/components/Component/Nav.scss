@@ -3,7 +3,7 @@
 @use "../../styles/partials/colors" as *;
 
 // Nav
-.header {
+.nav {
   padding: 0 16px;
   width: max-context;
   display: flex;
@@ -50,7 +50,11 @@
 
     &::placeholder {
       color: $brainflix-darkblack;
-      font-size: 14px;
+      @include bodycopy;
+    }
+
+    &:focus {
+      outline-color: $brainflix-blue;
     }
   }
 

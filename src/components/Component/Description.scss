@@ -1,0 +1,69 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.description {
+  &__title {
+    @include pageheader;
+    margin: 16px;
+  }
+
+  &__details {
+    display: flex;
+    min-height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px;
+
+    &--left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    &--right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 50%;
+    }
+  }
+
+  &__channel {
+    @include subheader;
+  }
+
+  &__date {
+    @include bodycopy;
+    color: $silver;
+  }
+
+  &__metrics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &__count {
+    @include bodycopy;
+    color: $silver;
+  }
+
+  &__summary {
+    margin: 16px;
+    @include bodycopy;
+  }
+}
+
+.break {
+  margin: 0 16px 0 16px;
+  color: $mercury;
+  stroke-width: 0.063rem;
+
+  &--title {
+    @extend .break;
+    @include tablet {
+      display: none;
+    }
+  }
+}

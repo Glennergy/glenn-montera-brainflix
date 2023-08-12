@@ -20,10 +20,14 @@
   }
 
   &__text {
+    @include labelsbuttons;
     color: $white;
     display: inline-block;
-    @include labelsbuttons;
     align-self: center;
     justify-self: center;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }

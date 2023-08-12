@@ -1,6 +1,10 @@
 function Profile(props) {
   if (props.currentUser === true) {
-    return <div className="profilepicture--user header__icon"></div>;
+    if (props.nav === true) {
+      return <div className="profilepicture--user nav__icon"></div>;
+    } else {
+      return <div className="profilepicture--user"></div>;
+    }
   } else {
     return <div className="profilepicture"></div>;
   }
