@@ -11,8 +11,7 @@ import details from "./data/video-details.json";
 function App() {
   // Creating variables with State Values
   const [currentVideo, setVideo] = useState(details[0]); // Holds current video information
-  // const [currentComments, setComments] = useState(currentVideo.comments);
-
+  const [videoList, setList] = useState(data);
   // call all State Change Functions
   const updatePage = (id) => {
     updateVideo(id);
@@ -49,7 +48,7 @@ function App() {
         {
           <NextVideos
             current={currentVideo.id}
-            data={data}
+            data={videoList}
             updatePage={updatePage}
           />
         }

@@ -34,6 +34,7 @@ function CommentSection(props) {
       <hr className="comments__break"></hr>
       {props.comments.map((comment) => (
         <Comments
+          key={comment.id}
           name={comment.name}
           date={comment.timestamp}
           comment={comment.comment}

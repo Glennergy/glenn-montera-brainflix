@@ -9,9 +9,10 @@
     margin: 16px 0;
     @include desktop {
       margin-left: 16px;
-      width: 300px;
+      width: 350px;
       min-height: 80px;
       max-height: 80px;
+      justify-content: center;
     }
     &:hover {
       cursor: pointer;
@@ -23,6 +24,12 @@
     height: 70px;
     border-radius: 4px;
     margin-right: 16px;
+    @include desktop {
+      max-height: 80px;
+      height: 80px;
+      min-width: 120px;
+      width: 120px;
+    }
   }
 
   &__description {
@@ -31,7 +38,8 @@
     flex-direction: column;
     justify-content: space-between;
     @include desktop {
-      max-height: 70px;
+      max-height: 80px;
+      justify-content: space-evenly;
     }
   }
 

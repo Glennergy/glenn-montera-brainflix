@@ -11,16 +11,19 @@ function NextVideos(props) {
   return (
     <section className="next-video">
       <h3 className="next-video__header"> NEXT VIDEOS</h3>
-      {props.data.map((data) => (
-        <Thumbnail
-          current={currentID}
-          id={data.id}
-          title={data.title}
-          channel={data.channel}
-          image={data.image}
-          videoHandler={videoHandler}
-        />
-      ))}
+      {props.data
+        .filter((data) => data.id !== currentID)
+        .map((data) => (
+          <Thumbnail
+            current={currentID}
+            key={data.id}
+            id={data.id}
+            title={data.title}
+            channel={data.channel}
+            image={data.image}
+            videoHandler={videoHandler}
+          />
+        ))}
     </section>
   );
 }

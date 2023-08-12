@@ -7,7 +7,7 @@ function Button(props) {
     return (
       <button className="button">
         <img className="button__icon" src={Upload} alt="upload"></img>
-        <p className="button__text">UPLOAD</p>
+        <p className="button__text--upload">UPLOAD</p>
       </button>
     );
   }
@@ -16,7 +16,7 @@ function Button(props) {
     return (
       <button type="submit" className="button">
         <img className="button__icon" src={AddComment} alt="comment"></img>
-        <p className="button__text">COMMENT</p>
+        <p className="button__text--comment">COMMENT</p>
       </button>
     );
   }
