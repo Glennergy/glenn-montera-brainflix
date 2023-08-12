@@ -3,6 +3,10 @@
 @use "../../styles/partials/colors" as *;
 
 .description {
+  @include desktop {
+    margin-left: 128px;
+    margin-bottom: 64px;
+  }
   &__title {
     @include pageheader;
     margin: 16px;
@@ -10,22 +14,40 @@
 
   &__details {
     display: flex;
-    min-height: 100px;
+    min-height: 70px;
     flex-direction: row;
     justify-content: space-between;
     margin: 16px;
+
+    @include tablet {
+      min-height: fit-content;
+    }
+    @include desktop {
+      margin-left: 0px;
+    }
 
     &--left {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+      @include tablet {
+        flex-direction: row;
+        min-width: 200px;
+        justify-content: space-between;
+      }
     }
 
     &--right {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      width: 50%;
+      width: 30%;
+      @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      @include desktop {
+      }
     }
   }
 
@@ -42,6 +64,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 100px;
+      justify-content: space-evenly;
+    }
   }
 
   &__count {
@@ -51,7 +80,15 @@
 
   &__summary {
     margin: 16px;
-    @include bodycopy;
+    @include desktop {
+      margin-left: 0px;
+    }
+    &--content {
+      @include bodycopy;
+      @include desktop {
+        min-height: 100px;
+      }
+    }
   }
 }
 
@@ -60,6 +97,11 @@
   color: $mercury;
   stroke-width: 0.063rem;
   border-style: solid;
+  @include desktop {
+    margin-right: 0px;
+
+    margin-left: 0px;
+  }
 
   &--title {
     @extend .break;

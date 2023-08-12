@@ -26,7 +26,7 @@ function App() {
   // State Change for Current selected video
   const updateVideo = (newid) => {
     for (let i = 0; i < details.length; i++) {
-      if (details[i].id == newid) {
+      if (details[i].id === newid) {
         setVideo((currentVideo) => details[i]);
       }
     }
@@ -41,17 +41,19 @@ function App() {
     <>
       <Nav />
       <Video video={currentVideo} />
-      <div className="main__container">
-        <Description video={currentVideo} />
-        <CommentSection comments={currentVideo.comments} />
+      <div className="main">
+        <div className="main__container">
+          <Description video={currentVideo} />
+          <CommentSection comments={currentVideo.comments} />
+        </div>
+        {
+          <NextVideos
+            current={currentVideo.id}
+            data={data}
+            updatePage={updatePage}
+          />
+        }
       </div>
-      {
-        <NextVideos
-          current={currentVideo.id}
-          data={data}
-          updatePage={updatePage}
-        />
-      }
     </>
   );
 }

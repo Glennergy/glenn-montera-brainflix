@@ -10,3 +10,11 @@
 li {
   list-style: none;
 }
+
+.main {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    padding-top: 64px;
+  }
+}

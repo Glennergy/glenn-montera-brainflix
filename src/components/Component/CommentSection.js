@@ -19,13 +19,15 @@ function CommentSection(props) {
       <div className="comments__top">
         <Profile currentUser={true} commentSection={true} />
         <form className="comments__form" onSubmit={clickHandler}>
-          <h3 className="comments__form--header">JOIN THE CONVERSATION</h3>
-          <textarea
-            id="comment"
-            name="comment"
-            className="comments__form--input"
-            placeholder="Add a new comment"
-          ></textarea>
+          <div className="comments__form--div">
+            <h3 className="comments__form--header">JOIN THE CONVERSATION</h3>
+            <textarea
+              id="comment"
+              name="comment"
+              className="comments__form--input"
+              placeholder="Add a new comment"
+            ></textarea>
+          </div>
           <Button type="comment" />
         </form>
       </div>

@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: row;
   margin: 16px 0;
+  @include desktop {
+    margin-right: 16px;
+  }
 
   &__information {
     width: 100%;

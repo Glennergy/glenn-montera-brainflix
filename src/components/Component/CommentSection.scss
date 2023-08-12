@@ -4,6 +4,10 @@
 
 .comments {
   margin: 16px;
+  @include desktop {
+    margin-left: 128px;
+    margin-right: 0px;
+  }
 
   &__count {
     @include subheader;
@@ -13,6 +17,9 @@
     display: flex;
     flex-direction: row;
     margin: 16px 0;
+    @include desktop {
+      margin-right: 16px;
+    }
   }
 
   &__profile {
@@ -22,9 +29,20 @@
   &__form {
     margin-left: 16px;
     width: 90%;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+    }
     &--header {
       @include sectionheader;
       color: $silver;
+    }
+    &--div {
+      @include tablet {
+        width: 100%;
+      }
     }
     &--input {
       min-height: 75px;
@@ -36,6 +54,13 @@
       border-color: $mercury;
       background-color: $alabaster;
       margin-bottom: 16px;
+      vertical-align: top;
+
+      @include tablet {
+        width: 98%;
+        min-height: 40px;
+        height: 40px;
+      }
 
       &::placeholder {
         padding-top: 16px;
@@ -43,6 +68,11 @@
         text-align: left;
         @include bodycopy;
         color: $brainflix-darkblack;
+
+        @include tablet {
+          justify-content: center;
+          vertical-align: middle;
+        }
       }
 
       &:focus {
@@ -54,5 +84,8 @@
     color: $mercury;
     stroke-width: 0.063rem;
     border-style: solid;
+    @include desktop {
+      margin-right: 0px;
+    }
   }
 }

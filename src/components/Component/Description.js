@@ -26,7 +26,9 @@ function Description(props) {
       </div>
       <hr className="break"></hr>
       <div className="description__summary">
-        <p>{props.video.description}</p>
+        <p className="description__summary--content">
+          {props.video.description}
+        </p>
       </div>
     </div>
   );

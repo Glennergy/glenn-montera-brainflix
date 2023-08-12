@@ -4,8 +4,18 @@
 
 .next-video {
   margin: 16px;
+
+  @include desktop {
+    border-left: 1px solid $mercury;
+    margin-left: 0px;
+    margin-right: 128px;
+    margin-top: 0;
+  }
   &__header {
     @include subheader;
     color: $silver;
+    @include desktop {
+      margin-left: 16px;
+    }
   }
 }

@@ -7,6 +7,12 @@
     display: flex;
     flex-direction: row;
     margin: 16px 0;
+    @include desktop {
+      margin-left: 16px;
+      width: 300px;
+      min-height: 80px;
+      max-height: 80px;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -24,6 +30,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include desktop {
+      max-height: 70px;
+    }
   }
 
   &__title {
