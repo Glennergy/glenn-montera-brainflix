@@ -13,6 +13,11 @@
   align-items: center;
   justify-content: center;
 
+  @include tablet {
+    min-width: 140px;
+    width: 140px;
+  }
+
   &__icon {
     @include labelsbuttons;
     align-self: center;
