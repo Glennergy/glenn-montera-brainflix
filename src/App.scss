@@ -11,21 +11,6 @@ li {
   list-style: none;
 }
 
-.profilepicture {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: $mercury;
-
-  &--user {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    background-image: url("./assets/images/Mohan-muruge.jpg");
-    background-size: cover;
-  }
-}
-
 .next-video {
   margin-top: 16px;
   &__item {

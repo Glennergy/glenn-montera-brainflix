@@ -1,0 +1,16 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.comments {
+  margin: 16px;
+
+  &__count {
+    @include subheader;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+  }
+}

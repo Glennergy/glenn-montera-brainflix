@@ -1,6 +1,7 @@
 import Comments from "./Comments";
 import Profile from "./Profile";
 import Button from "./Button";
+import "./CommentSection.scss";
 
 function CommentSection(props) {
   const count = props.comments.length;
@@ -14,9 +15,9 @@ function CommentSection(props) {
 
   return (
     <section className="comments">
-      <h3>{count} Comments</h3>
+      <h3 className="comments__count">{count} Comments</h3>
       <div className="comments__top">
-        <Profile currentUser={true} />
+        <Profile currentUser={true} commentSection={true} />
         <form className="comments__form" onSubmit={clickHandler}>
           <h3 className="comments__form--header">JOIN THE CONVERSATION</h3>
           <input
