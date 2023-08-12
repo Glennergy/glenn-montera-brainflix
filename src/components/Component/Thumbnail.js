@@ -1,3 +1,5 @@
+import "./Thumbnail.scss";
+
 function Thumbnail(props) {
   if (props.id !== props.current) {
     return (

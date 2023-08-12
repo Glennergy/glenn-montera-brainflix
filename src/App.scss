@@ -10,17 +10,3 @@
 li {
   list-style: none;
 }
-
-.next-video {
-  margin-top: 16px;
-  &__item {
-    margin: 16px;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  &__thumbnails {
-    width: 100px;
-    height: 100px;
-  }
-}

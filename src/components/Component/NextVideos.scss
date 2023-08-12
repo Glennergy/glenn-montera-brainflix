@@ -1,0 +1,11 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.next-video {
+  margin: 16px;
+  &__header {
+    @include subheader;
+    color: $silver;
+  }
+}

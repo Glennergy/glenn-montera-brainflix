@@ -59,6 +59,7 @@
   margin: 0 16px 0 16px;
   color: $mercury;
   stroke-width: 0.063rem;
+  border-style: solid;
 
   &--title {
     @extend .break;

@@ -1,4 +1,5 @@
 import Thumbnail from "./Thumbnail";
+import "./NextVideos.scss";
 
 function NextVideos(props) {
   const currentID = props.current;

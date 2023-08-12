@@ -1,0 +1,38 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.next-video {
+  &__item {
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__thumbnails {
+    min-width: 100px;
+    width: 100px;
+    height: 70px;
+    border-radius: 4px;
+    margin-right: 16px;
+  }
+
+  &__description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include subheader;
+  }
+
+  &__channel {
+    margin-top: 16px;
+    @include bodycopy;
+    text-align: left;
+  }
+}
