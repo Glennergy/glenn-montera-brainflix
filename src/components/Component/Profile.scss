@@ -2,13 +2,13 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/colors" as *;
 .profilepicture {
-  width: 50px;
+  min-width: 50px;
   height: 50px;
   border-radius: 25px;
   background-color: $mercury;
 
   &--user {
-    width: 50px;
+    min-width: 50px;
     height: 50px;
     border-radius: 25px;
     background-image: url("../../assets/images/Mohan-muruge.jpg");

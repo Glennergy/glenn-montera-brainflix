@@ -20,15 +20,16 @@ function CommentSection(props) {
         <Profile currentUser={true} commentSection={true} />
         <form className="comments__form" onSubmit={clickHandler}>
           <h3 className="comments__form--header">JOIN THE CONVERSATION</h3>
-          <input
-            type="text"
+          <textarea
             id="comment"
             name="comment"
-            placeholder="Add a New Comment"
-          ></input>
+            className="comments__form--input"
+            placeholder="Add a new comment"
+          ></textarea>
           <Button type="comment" />
         </form>
       </div>
+      <hr className="comments__break"></hr>
       {props.comments.map((comment) => (
         <Comments
           name={comment.name}

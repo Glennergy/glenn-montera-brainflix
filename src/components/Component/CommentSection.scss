@@ -12,5 +12,46 @@
   &__top {
     display: flex;
     flex-direction: row;
+    margin: 16px 0;
+  }
+
+  &__profile {
+    margin-top: 16px;
+  }
+
+  &__form {
+    margin-left: 16px;
+    width: 90%;
+    &--header {
+      @include sectionheader;
+      color: $silver;
+    }
+    &--input {
+      min-height: 75px;
+      padding: 0;
+      width: 98%;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 4px;
+      border-color: $mercury;
+      background-color: $alabaster;
+      margin-bottom: 16px;
+
+      &::placeholder {
+        padding-top: 16px;
+        padding-left: 16px;
+        text-align: left;
+        @include bodycopy;
+        color: $brainflix-darkblack;
+      }
+
+      &:focus {
+        outline-color: $brainflix-blue;
+      }
+    }
+  }
+  &__break {
+    color: $mercury;
+    stroke-width: 0.063rem;
   }
 }

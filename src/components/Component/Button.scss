@@ -20,7 +20,7 @@
   }
 
   &__text {
-    @include labelsbuttons;
+    @include sectionheader;
     color: $white;
     display: inline-block;
     align-self: center;

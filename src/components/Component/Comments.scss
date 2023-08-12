@@ -1,0 +1,33 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.comments__entry {
+  display: flex;
+  flex-direction: row;
+  margin: 16px 0;
+
+  &__information {
+    width: 100%;
+    margin-left: 16px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__name {
+    @include subheader;
+  }
+
+  &__date {
+    @include bodycopy;
+    color: $silver;
+  }
+
+  &__comment {
+    margin-top: 16px;
+  }
+}
