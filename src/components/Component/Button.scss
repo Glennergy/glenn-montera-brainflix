@@ -3,27 +3,27 @@
 @use "../../styles/partials/colors" as *;
 
 .button {
-  height: 40px;
+  height: 2.5rem;
   background-color: $brainflix-blue;
   width: 100%;
   padding: 0px;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border-style: none;
   display: flex;
   align-items: center;
 
   @include tablet {
-    min-width: 140px;
-    width: 140px;
+    min-width: 8.75rem;
+    width: 8.75rem;
   }
 
   &__icon {
     @include labelsbuttons;
     align-self: center;
     justify-self: flex-start;
-    padding-left: 10px;
+    padding-left: 0.625rem;
     @include tablet {
-      padding-left: 10px;
+      padding-left: 0.625rem;
     }
   }
 

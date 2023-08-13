@@ -5,14 +5,14 @@
 .comments__entry {
   display: flex;
   flex-direction: row;
-  margin: 16px 0;
+  margin: 1rem 0;
   @include desktop {
-    margin-right: 16px;
+    margin-right: 1rem;
   }
 
   &__information {
     width: 100%;
-    margin-left: 16px;
+    margin-left: 1rem;
   }
 
   &__info {
@@ -31,6 +31,6 @@
   }
 
   &__comment {
-    margin-top: 16px;
+    margin-top: 1rem;
   }
 }

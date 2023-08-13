@@ -6,12 +6,12 @@
   &__item {
     display: flex;
     flex-direction: row;
-    margin: 16px 0;
+    margin: 1rem 0;
     @include desktop {
-      margin-left: 16px;
-      width: 350px;
-      min-height: 80px;
-      max-height: 80px;
+      margin-left: 1rem;
+      width: 21.875rem;
+      min-height: 5rem;
+      max-height: 5rem;
       justify-content: center;
     }
     &:hover {
@@ -19,16 +19,16 @@
     }
   }
   &__thumbnails {
-    min-width: 100px;
-    width: 100px;
-    height: 70px;
-    border-radius: 4px;
-    margin-right: 16px;
+    min-width: 6.25rem;
+    width: 6.25rem;
+    height: 4.375rem;
+    border-radius: 0.25rem;
+    margin-right: 1rem;
     @include desktop {
-      max-height: 80px;
-      height: 80px;
-      min-width: 120px;
-      width: 120px;
+      max-height: 5rem;
+      height: 5rem;
+      min-width: 7.5rem;
+      width: 7.5rem;
     }
   }
 
@@ -38,7 +38,7 @@
     flex-direction: column;
     justify-content: space-between;
     @include desktop {
-      max-height: 80px;
+      max-height: 5rem;
       justify-content: space-evenly;
     }
   }
@@ -48,7 +48,7 @@
   }
 
   &__channel {
-    margin-top: 16px;
+    margin-top: 1rem;
     @include bodycopy;
     text-align: left;
   }
