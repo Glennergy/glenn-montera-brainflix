@@ -1,4 +1,5 @@
 import Profile from "./Profile";
+import ReactTimeAgo from "react-time-ago";
 import "./Comments.scss";
 
 function Comments(props) {
@@ -10,7 +11,9 @@ function Comments(props) {
         <div className="comments__entry__information">
           <div className="comments__entry__info">
             <p className="comments__entry__name">{props.name}</p>
-            <p className="comments__entry__date">{time}</p>
+            <p className="comments__entry__date">
+              <ReactTimeAgo date={time} locale="en-US" timeStyle={"round"} />
+            </p>
           </div>
           <p className="comments__entry__comment">{props.comment}</p>
         </div>
