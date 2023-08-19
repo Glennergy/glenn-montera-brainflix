@@ -1,7 +1,7 @@
 import "./Nav.scss";
 import Logo from "../../assets/logo/BrainFlix-logo.svg";
 import Button from "./Button";
-import Profile from "./Profile";
+import Profile from "../Profile/Profile";
 
 function Nav() {
   return (

@@ -1,4 +1,4 @@
-import Thumbnail from "./Thumbnail";
+import Thumbnail from "../Thumbnail/Thumbnail";
 import "./NextVideos.scss";
 
 function NextVideos(props) {

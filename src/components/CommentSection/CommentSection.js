@@ -1,5 +1,5 @@
 import Comments from "./Comments";
-import Profile from "./Profile";
+import Profile from "../Profile/Profile";
 import Button from "./Button";
 import "./CommentSection.scss";
 
