@@ -1,10 +1,12 @@
-import Comments from "./Comments";
+import Comments from "../Comments/Comments";
 import Profile from "../Profile/Profile";
-import Button from "./Button";
+import Button from "../Button/Button";
+import axios from "axios";
 import "./CommentSection.scss";
 
-function CommentSection(props) {
-  const count = props.comments.length;
+function CommentSection({ comments }) {
+  const comment = { comments }.comments;
+  const count = comment.length;
 
   // clickHandler for Comment Section, Does not post at this moment, and will also console.log the input
   const clickHandler = (e) => {
@@ -32,7 +34,7 @@ function CommentSection(props) {
         </form>
       </div>
       <hr className="comments__break"></hr>
-      {props.comments.map((comment) => (
+      {comment.map((comment) => (
         <Comments
           key={comment.id}
           name={comment.name}

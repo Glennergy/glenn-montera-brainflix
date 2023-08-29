@@ -1,13 +1,13 @@
 import "./Video.scss";
 
-function Video(props) {
+function Video({ video, image }) {
   return (
     <div className="video">
       <video
         className="video__player"
         controls
-        poster={props.video.image}
-        src={props.video.video}
+        poster={image}
+        src={video}
       ></video>
     </div>
   );
