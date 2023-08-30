@@ -11,6 +11,11 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: $brainflix-black;
+}
+
 .main {
   @include desktop {
     display: flex;

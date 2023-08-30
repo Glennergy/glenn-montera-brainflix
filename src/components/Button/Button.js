@@ -18,6 +18,15 @@ function Button(props) {
     );
   }
 
+  if (props.type === "publish") {
+    return (
+      <button type="submit" className="button">
+        <img className="button__icon" src={Upload} alt="upload"></img>
+        <p className="button__text--upload">PUBLISH</p>
+      </button>
+    );
+  }
+
   if (props.type === "comment") {
     return (
       <button type="submit" className="button">
