@@ -34,7 +34,11 @@ export default function Upload() {
         <div className="upload__form--upper">
           <div className="upload__form__divider">
             <label className="upload__form--label">VIDEO THUMBNAIL</label>
-            <img className="upload__form--thumbnail" src={Thumbnail}></img>
+            <img
+              className="upload__form--thumbnail"
+              src={Thumbnail}
+              alt="thumbnail"
+            ></img>
           </div>
           <div className="upload__form__divider--inputs">
             <label className="upload__form--label" htmlFor="title">

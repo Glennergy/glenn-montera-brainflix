@@ -1,6 +1,6 @@
 import "../../App.scss";
 import { useState, useEffect } from "react";
-import { Await, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Nav from "../Nav/Nav.js";
 import Video from "../Video/Video";
 import Description from "../Description/Description";
@@ -45,10 +45,10 @@ function Home() {
       const defaultVideo = "84e96018-4022-434e-80bf-000ce4cd12b8";
       setCurrentVideo(defaultVideo);
     }
-    if (videoDetails.length != 0) {
+    if (videoDetails.length !== 0) {
       setLoading(false);
     }
-  });
+  }, [videoId, videoDetails.length]);
 
   useEffect(() => {
     const getAppData = async () => {
@@ -63,10 +63,7 @@ function Home() {
 
       try {
         const details = await axios.get(
-          "https://project-2-api.herokuapp.com/videos/" +
-            currentVideo +
-            "?api_key=" +
-            key
+          `https://project-2-api.herokuapp.com/videos/${currentVideo}?api_key=${key}`
         );
         setVideoDetails(details.data);
       } catch (err) {

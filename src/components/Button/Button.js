@@ -1,5 +1,5 @@
 import "./Button.scss";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Upload from "../../assets/icons/upload.svg";
 import AddComment from "../../assets/icons/add_comment.svg";
 
