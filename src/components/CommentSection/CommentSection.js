@@ -1,12 +1,11 @@
 import Comments from "../Comments/Comments";
 import Profile from "../Profile/Profile";
 import Button from "../Button/Button";
-import axios from "axios";
 import "./CommentSection.scss";
 
-function CommentSection({ comments }) {
-  const comment = { comments }.comments;
-  const count = comment.length;
+function CommentSection(props) {
+  const comment = props.comments;
+  const count = 3;
 
   // clickHandler for Comment Section, Does not post at this moment, and will also console.log the input
   const clickHandler = (e) => {
