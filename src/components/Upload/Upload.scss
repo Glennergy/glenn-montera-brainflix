@@ -8,6 +8,27 @@
     flex-direction: column;
     padding: 1rem;
 
+    &--upper {
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    &__divider {
+      display: flex;
+      flex-direction: column;
+      &--inputs {
+        @extend .upload__form__divider;
+        width: 100%;
+        margin: 0;
+        @include desktop {
+          margin-left: 2rem;
+        }
+      }
+    }
+
     &--title {
       @include pageheader;
     }
@@ -51,7 +72,7 @@
       vertical-align: top;
 
       @include tablet {
-        width: 98%;
+        width: 99%;
         min-height: 2.5rem;
         height: 2.5rem;
       }
@@ -73,6 +94,17 @@
         outline-color: $brainflix-blue;
       }
     }
+    &--thumbnail {
+      max-height: fit-content;
+      border-radius: 4px;
+      @include tablet {
+        max-height: 300px;
+        max-width: 400px;
+      }
+      @include desktop {
+        max-height: 300px;
+      }
+    }
   }
   &__break {
     color: $mercury;
@@ -83,12 +115,34 @@
     @include desktop {
       margin-right: 0;
     }
+    &--secondary {
+      @extend .upload__break;
+      display: none;
+
+      @include tablet {
+        display: initial;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    min-height: 7rem;
+    max-height: 7rem;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 
   &__cancel {
     @include sectionheader;
     color: $brainflix-blue;
-    margin-top: 5rem;
     text-align: center;
+    @include tablet {
+      margin-right: 2rem;
+    }
   }
 }

@@ -22,7 +22,7 @@ function Button(props) {
     return (
       <button type="submit" className="button">
         <img className="button__icon" src={Upload} alt="upload"></img>
-        <p className="button__text--upload">PUBLISH</p>
+        <p className="button__text--publish">PUBLISH</p>
       </button>
     );
   }

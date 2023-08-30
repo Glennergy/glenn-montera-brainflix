@@ -54,6 +54,15 @@
         position: initial;
       }
     }
+
+    &--publish {
+      @extend .button__text;
+      position: absolute;
+      left: 43%;
+      @include tablet {
+        position: initial;
+      }
+    }
   }
 
   &:hover {
