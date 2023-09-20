@@ -1,12 +1,12 @@
 import "../../App.scss";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Nav from "../Nav/Nav.js";
-import Video from "../Video/Video";
-import Description from "../Description/Description";
-import CommentSection from "../CommentSection/CommentSection";
-import NextVideos from "../NextVideos/NextVideos";
-import GetKey from "../GetKey/GetKey";
+import Nav from "../../components/Nav/Nav.js";
+import Video from "../../components/Video/Video";
+import Description from "../../components/Description/Description";
+import CommentSection from "../../components/CommentSection/CommentSection";
+import NextVideos from "../../components/NextVideos/NextVideos";
+import GetKey from "../../components/GetKey/GetKey";
 import axios from "axios";
 
 function Home() {
@@ -54,7 +54,8 @@ function Home() {
     const getAppData = async () => {
       try {
         const data = await axios.get(
-          `https://project-2-api.herokuapp.com/videos?api_key=${key}`
+          `http://localhost:8080/videos/`
+          // `https://project-2-api.herokuapp.com/videos?api_key=${key}`
         );
         setVideoList(data.data);
       } catch (err) {
@@ -63,7 +64,8 @@ function Home() {
 
       try {
         const details = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/${currentVideo}?api_key=${key}`
+          `http://localhost:8080/videos/${currentVideo}`
+          // `https://project-2-api.herokuapp.com/videos/${currentVideo}?api_key=${key}`
         );
         setVideoDetails(details.data);
       } catch (err) {
@@ -73,19 +75,6 @@ function Home() {
     getAppData();
   }, [currentVideo]);
 
-  //   // State Change for Current selected video
-  //   const updateVideo = (newid) => {
-  //     for (let i = 0; i < details.length; i++) {
-  //       if (details[i].id === newid) {
-  //         setVideo((currentVideo) => details[i]);
-  //       }
-  //     }
-  //   };
-
-  // State Change for currentComments
-  // const updateComments = (comments) => {
-  //   setComments((currentComments) => comments);
-  // };
   if (!isLoading) {
     return (
       <>

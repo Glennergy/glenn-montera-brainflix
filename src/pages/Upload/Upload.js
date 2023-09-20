@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Thumbnail from "../../assets/images/Upload-video-preview.jpg";
-import Nav from "../Nav/Nav.js";
-import Button from "../Button/Button.js";
+import Nav from "../../components/Nav/Nav.js";
+import Button from "../../components/Button/Button.js";
 import "./Upload.scss";
+import axios from "axios";
 
 export default function Upload() {
   const [title, setTitle] = useState("");
@@ -20,8 +21,16 @@ export default function Upload() {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    alert("Video Uploaded");
-    navigate("/");
+    axios
+      .post("http://localhost:8080/videos", {
+        newtitle: title,
+        newdescription: description,
+      })
+      .then((response) => {
+        console.log("Video Uploaded");
+        console.log(response.data);
+        navigate("/");
+      });
   };
 
   return (
